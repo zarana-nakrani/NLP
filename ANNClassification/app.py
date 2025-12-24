@@ -6,16 +6,16 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler, OneHotEncoder
 import tensorflow as tf
 
 ## Load the trained model 
-model = tf.keras.models.load_model('model.keras')
+model = tf.keras.models.load_model('./model.keras')
 
 #load encoders and scalers
-with open('label_encoder_gender.pkl', 'rb') as file:
+with open('./label_encoder_gender.pkl', 'rb') as file:
     gender_encoder = pickle.load(file)
 
-with open('ohe_geo.pkl', 'rb') as file:
+with open('./ohe_geo.pkl', 'rb') as file:
     geo_encoder = pickle.load(file)
 
-with open('scaler.pkl', 'rb') as file:
+with open('./scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 ## Streamlit App Initialization
