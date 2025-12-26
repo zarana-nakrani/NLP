@@ -10,7 +10,6 @@ import pathlib
 BASE_DIR = pathlib.Path(__file__).parent.resolve()
 MODEL_PATH = BASE_DIR / "regression_model.h5"
 model = tf.keras.models.load_model(MODEL_PATH)
-model = tf.keras.models.load_model('regression_model.h5')
 
 
 ## Load the encoders and scalers
