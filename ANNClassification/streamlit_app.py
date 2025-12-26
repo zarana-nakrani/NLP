@@ -4,8 +4,12 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pickle
+import pathlib
 
 ## Load the trained regression model
+BASE_DIR = pathlib.Path(__file__).parent.resolve()
+MODEL_PATH = BASE_DIR / "regression_model.h5"
+model = tf.keras.models.load_model(MODEL_PATH)
 model = tf.keras.models.load_model('regression_model.h5')
 
 
