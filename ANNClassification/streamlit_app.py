@@ -13,14 +13,14 @@ model = tf.keras.models.load_model(MODEL_PATH)
 
 
 ## Load the encoders and scalers
-with open('label_encoder_gender.pkl', 'rb') as file:
+with open(f'{BASE_DIR}/label_encoder_gender.pkl', 'rb') as file:
     gender_encoder = pickle.load(file)
 
 
-with open('ohe_geo.pkl', 'rb') as file:
+with open(f'{BASE_DIR}/ohe_geo.pkl', 'rb') as file:
     geo_encoder = pickle.load(file)
 
-with open('scaler_regression.pkl', 'rb') as file:
+with open(f'{BASE_DIR}/scaler_regression.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 ## Streamlit App Initialization
